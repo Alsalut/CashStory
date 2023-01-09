@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layout_and_background"
+    android:padding="15dp"
+    tools:context="change.ChangeActivity">
+
+    <ImageView
+        android:id="@+id/image_view_change_safe_1"
+        style="@style/imageChange"
+        app:layout_constraintBottom_toTopOf="@id/image_view_change_safe_2"
+        app:layout_constraintEnd_toStartOf="@id/image_button_change_safe_cash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/safe" />
+
+    <ImageButton
+        android:id="@+id/image_button_change_safe_cash"
+        style="@style/buttonChange"
+        android:background="@drawable/image_button_style_red"
+        app:layout_constraintBottom_toTopOf="@id/image_button_change_cash_safe"
+        app:layout_constraintEnd_toStartOf="@id/image_view_change_cash_1"
+        app:layout_constraintStart_toEndOf="@id/image_view_change_safe_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/minus" />
+
+    <ImageView
+        android:id="@+id/image_view_change_cash_1"
+        style="@style/imageChange"
+        app:layout_constraintBottom_toTopOf="@id/image_view_change_cash_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_button_change_safe_cash"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cash" />
+
+    <ImageView
+        android:id="@+id/image_view_change_safe_2"
+        style="@style/imageChange"
+        app:layout_constraintBottom_toTopOf="@id/image_view_change_cash_3"
+        app:layout_constraintEnd_toStartOf="@id/image_button_change_cash_safe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_view_change_safe_1"
+        app:srcCompat="@drawable/safe" />
+
+    <ImageButton
+        android:id="@+id/image_button_change_cash_safe"
+        style="@style/buttonChange"
+        android:background="@drawable/image_button_style_green"
+        app:layout_constraintBottom_toTopOf="@id/image_button_change_cash_card"
+        app:layout_constraintEnd_toStartOf="@id/image_view_change_cash_2"
+        app:layout_constraintStart_toEndOf="@id/image_view_change_safe_2"
+        app:layout_constraintTop_toBottomOf="@id/image_button_change_safe_cash"
+        app:srcCompat="@drawable/plus" />
+
+    <ImageView
+        android:id="@+id/image_view_change_cash_2"
+        style="@style/imageChange"
+        app:layout_constraintBottom_toTopOf="@id/image_view_change_card_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_button_change_cash_safe"
+        app:layout_constraintTop_toBottomOf="@id/image_view_change_cash_1"
+        app:srcCompat="@drawable/cash" />
+
+    <ImageView
+        android:id="@+id/image_view_change_cash_3"
+        style="@style/imageChange"
+        app:layout_constraintBottom_toTopOf="@id/image_view_change_card_4"
+        app:layout_constraintEnd_toStartOf="@id/image_button_change_cash_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_view_change_safe_2"
+        app:srcCompat="@drawable/cash" />
+
+    <ImageButton
+        android:id="@+id/image_button_change_cash_card"
+        style="@style/buttonChange"
+        android:background="@drawable/image_button_style_red"
+        app:layout_constraintBottom_toTopOf="@id/image_button_change_card_cash"
+        app:layout_constraintEnd_toStartOf="@id/image_view_change_card_3"
+        app:layout_constraintStart_toEndOf="@id/image_view_change_cash_3"
+        app:layout_constraintTop_toBottomOf="@id/image_button_change_cash_safe"
+        app:srcCompat="@drawable/minus" />
+
+    <ImageView
+        android:id="@+id/image_view_change_card_3"
+        style="@style/imageChange"
+        app:layout_constraintBottom_toTopOf="@id/image_view_change_card_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_button_change_cash_card"
+        app:layout_constraintTop_toBottomOf="@id/image_view_change_cash_2"
+        app:srcCompat="@drawable/card" />
+
+    <ImageView
+        android:id="@+id/image_view_change_cash_4"
+        style="@style/imageChange"
+        app:layout_constraintBottom_toTopOf="@id/edit_text_change_sum"
+        app:layout_constraintEnd_toStartOf="@id/image_button_change_card_cash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_view_change_cash_3"
+        app:srcCompat="@drawable/cash" />
+
+    <ImageButton
+        android:id="@+id/image_button_change_card_cash"
+        style="@style/buttonChange"
+        android:background="@drawable/image_button_style_green"
+        app:layout_constraintBottom_toTopOf="@id/edit_text_change_sum"
+        app:layout_constraintEnd_toStartOf="@id/image_view_change_card_4"
+        app:layout_constraintStart_toEndOf="@id/image_view_change_cash_4"
+        app:layout_constraintTop_toBottomOf="@id/image_button_change_cash_card"
+        app:srcCompat="@drawable/plus" />
+
+    <ImageView
+        android:id="@+id/image_view_change_card_4"
+        style="@style/imageChange"
+        app:layout_constraintBottom_toTopOf="@id/edit_text_change_sum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_button_change_card_cash"
+        app:layout_constraintTop_toBottomOf="@id/image_view_change_card_3"
+        app:srcCompat="@drawable/card" />
+
+    <EditText
+        android:id="@+id/edit_text_change_sum"
+        style="@style/editTextPlusMinus"
+        android:hint="@string/summa"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_button_change_card_cash" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

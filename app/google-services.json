@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "210612467830",
+    "project_id": "cashstory-258c1",
+    "storage_bucket": "cashstory-258c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210612467830:android:989adc8abf7b9438df4757",
+        "android_client_info": {
+          "package_name": "com.alex.cashstory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "210612467830-k6899m0u8akvri9te5eqncrdrmlv211v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACtZmKbLjLhcAbsWGlR7Grayi01lSge-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "210612467830-k6899m0u8akvri9te5eqncrdrmlv211v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

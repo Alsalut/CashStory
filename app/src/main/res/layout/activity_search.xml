@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layout_and_background"
+    android:padding="30dp"
+    tools:context="search.SearchActivity">
+
+    <Button
+        android:id="@+id/button_search"
+        style="@style/buttonMain"
+        android:backgroundTint="@color/green_light"
+        android:text="@string/find"
+        app:layout_constraintBottom_toTopOf="@id/edit_text_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_text_search"
+        style="@style/editTextModification"
+        android:hint="@string/input_search_text"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_search" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

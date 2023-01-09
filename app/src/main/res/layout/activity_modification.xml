@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layout_and_background"
+    android:padding="30dp"
+    tools:context="modification.ModificationActivity">
+
+    <Button
+        android:id="@+id/button_modification_save_change"
+        style="@style/buttonMain"
+        android:backgroundTint="@color/green_light"
+        android:text="@string/save_changed"
+        app:layout_constraintBottom_toTopOf="@id/edit_text_modification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_text_modification"
+        style="@style/editTextModification"
+        app:layout_constraintBottom_toTopOf="@id/button_modification_del_transaction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_modification_save_change" />
+
+    <Button
+        android:id="@+id/button_modification_del_transaction"
+        style="@style/buttonMain"
+        android:backgroundTint="@color/orange_light"
+        android:text="@string/del_transaction"
+        app:layout_constraintBottom_toTopOf="@id/button_modification_del_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_modification" />
+
+    <Button
+        android:id="@+id/button_modification_del_history"
+        style="@style/buttonMain"
+        android:backgroundTint="@color/red_light"
+        android:text="@string/del_history"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_modification_del_transaction" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

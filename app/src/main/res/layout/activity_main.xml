@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutMain"
+    style="@style/layout_and_background"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/layoutButton"
+        app:layout_constraintEnd_toEndOf="@id/layoutMain"
+        app:layout_constraintStart_toStartOf="@id/layoutMain"
+        app:layout_constraintTop_toTopOf="@id/layoutMain">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutTextViewLeft"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/layoutTextViewRight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageCard"
+                style="@style/imageMain"
+                app:layout_constraintBottom_toTopOf="@id/textViewCard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/card" />
+
+            <TextView
+                android:id="@+id/textViewCard"
+                style="@style/textViewMain"
+                android:hint="@string/card"
+                app:layout_constraintBottom_toTopOf="@id/imageSafe"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageCard" />
+
+            <ImageView
+                android:id="@+id/imageSafe"
+                style="@style/imageMain"
+                android:layout_marginTop="50dp"
+                app:layout_constraintBottom_toTopOf="@id/textViewSafe"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewCard"
+                app:srcCompat="@drawable/safe" />
+
+            <TextView
+                android:id="@+id/textViewSafe"
+                style="@style/textViewMain"
+                android:hint="@string/safe"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageSafe" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutTextViewRight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/layoutTextViewLeft"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageCash"
+                style="@style/imageMain"
+                app:layout_constraintBottom_toTopOf="@id/textViewCash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cash" />
+
+            <TextView
+                android:id="@+id/textViewCash"
+                style="@style/textViewMain"
+                android:hint="@string/cash"
+                app:layout_constraintBottom_toTopOf="@id/imageAll"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageCash" />
+
+            <ImageView
+                android:id="@+id/imageAll"
+                style="@style/imageMain"
+                android:layout_marginTop="50dp"
+                app:layout_constraintBottom_toTopOf="@id/textViewAll"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewCash"
+                app:srcCompat="@drawable/all" />
+
+            <TextView
+                android:id="@+id/textViewAll"
+                style="@style/textViewMain"
+                android:hint="@string/all"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageAll" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/layoutMain"
+        app:layout_constraintEnd_toEndOf="@id/layoutMain"
+        app:layout_constraintStart_toStartOf="@id/layoutMain"
+        app:layout_constraintTop_toBottomOf="@id/layoutTextView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutButtonLeft"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/layoutButtonRight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/buttonHistory"
+                style="@style/buttonMain"
+                android:backgroundTint="@color/green_light"
+                android:text="@string/history"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutButtonRight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/layoutButtonLeft"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/buttonPlus"
+                style="@style/buttonMain"
+                android:text="@string/plus"
+                android:backgroundTint="@color/green"
+                app:layout_constraintBottom_toTopOf="@id/buttonMinus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonMinus"
+                style="@style/buttonMain"
+                android:backgroundTint="@color/red_light"
+                android:text="@string/minus"
+                app:layout_constraintBottom_toTopOf="@id/buttonChange"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
+
+            <Button
+                android:id="@+id/buttonChange"
+                style="@style/buttonMain"
+                android:backgroundTint="@color/orange_light"
+                android:text="@string/change"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonMinus" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

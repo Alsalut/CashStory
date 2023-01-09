@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layout_and_background"
+    android:padding="15dp"
+    tools:context="plus.PlusActivity">
+
+    <ImageView
+        android:id="@+id/image_view_plus_cash"
+        style="@style/imagePlus"
+        app:layout_constraintBottom_toTopOf="@id/image_view_plus_card"
+        app:layout_constraintEnd_toStartOf="@id/image_button_plus_cash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cash" />
+
+    <ImageButton
+        android:id="@+id/image_button_plus_cash"
+        style="@style/buttonPlusMinus"
+        android:background="@drawable/image_button_style_green"
+        app:layout_constraintBottom_toTopOf="@id/image_button_plus_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_view_plus_cash"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plus" />
+
+    <ImageView
+        android:id="@+id/image_view_plus_card"
+        style="@style/imagePlus"
+        app:layout_constraintBottom_toTopOf="@id/edit_text_plus_comment"
+        app:layout_constraintEnd_toStartOf="@id/image_button_plus_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_view_plus_cash"
+        app:srcCompat="@drawable/card" />
+
+    <ImageButton
+        android:id="@+id/image_button_plus_card"
+        style="@style/buttonPlusMinus"
+        android:background="@drawable/image_button_style_green"
+        app:layout_constraintBottom_toTopOf="@id/edit_text_plus_comment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_view_plus_card"
+        app:layout_constraintTop_toBottomOf="@id/image_button_plus_cash"
+        app:srcCompat="@drawable/plus" />
+
+    <EditText
+        android:id="@+id/edit_text_plus_comment"
+        style="@style/editTextPlusMinus"
+        android:hint="@string/add_comment"
+        app:layout_constraintBottom_toTopOf="@id/edit_text_plus_sum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_view_plus_card" />
+
+    <EditText
+        android:id="@+id/edit_text_plus_sum"
+        style="@style/editTextPlusMinus"
+        android:hint="@string/summa"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_plus_comment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

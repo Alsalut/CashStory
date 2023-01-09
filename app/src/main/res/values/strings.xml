@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Финансы</string>
+    <string name="card">Карта</string>
+    <string name="cash">Наличные</string>
+    <string name="safe">Запас</string>
+    <string name="all">Всего</string>
+    <string name="history">История</string>
+    <string name="plus">Приход</string>
+    <string name="minus">Расход</string>
+    <string name="change">Перемещение</string>
+    <string name="add_comment">Добавьте комментарий</string>
+    <string name="summa">Сумма</string>
+    <string name="search">Поиск</string>
+    <string name="find">Найти</string>
+    <string name="modification">Редактирование</string>
+    <string name="save_changed">Сохранить изменения</string>
+    <string name="del_transaction">Удалить транзакцию</string>
+    <string name="del_history">Удалить\nвсю историю</string>
+    <string name="input_search_text">Введите текст для поиска</string>
+</resources>
