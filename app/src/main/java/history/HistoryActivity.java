@@ -99,11 +99,8 @@ public class HistoryActivity extends ListActivity implements View.OnClickListene
    @Override
    public void onClick( View button )
    {
-      switch( button.getId() )
-      {
-         case R.id.image_button_find:
-            startActivity( new Intent( this, SearchActivity.class ) );
-      }
+      if( button.getId() == R.id.image_button_find )
+         startActivity( new Intent( this, SearchActivity.class ) );
    }
 
    // При кратком нажатии на элементе списка

@@ -129,13 +129,6 @@ public class CreateTransaction implements IConstant
       // 03.дек.2021 13:55:02&splitElement&6559.96&splitElement&35150.00&splitElement&0.00&splitElement&Перевёл О за декабрь&splitElement&С Карты&splitElement&5000.00
       // добавляем остальную историю
       // формируем и возвращаем строку новой истории транзакций
-      return   new SimpleDateFormat( timePattern ).format( new Date( System.currentTimeMillis() ) )
-               + splitElement + arrayLastTransaction[1]
-               + splitElement + arrayLastTransaction[2]
-               + splitElement + arrayLastTransaction[3]
-               + splitElement + arrayLastTransaction[4]
-               + splitElement + arrayLastTransaction[5]
-               + splitElement + arrayLastTransaction[6]
-               + splitHistory + stringHistory;
+      return new SimpleDateFormat( timePattern ).format( new Date( System.currentTimeMillis() ) ) + splitElement + arrayLastTransaction[1] + splitElement + arrayLastTransaction[2] + splitElement + arrayLastTransaction[3] + splitElement + arrayLastTransaction[4] + splitElement + arrayLastTransaction[5] + splitElement + arrayLastTransaction[6] + splitHistory + stringHistory;
    }
 }

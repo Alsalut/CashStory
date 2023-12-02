@@ -203,10 +203,7 @@ public class MainActivity extends AppCompatActivity implements IConstant, View.O
       {
          final String[] array = element.split( splitElement );
 
-         final String string =   array[0] + splitElement +
-                                 array[4] + splitElement +
-                                 array[5] + splitElement +
-                                 array[6];
+         final String string = array[0] + splitElement + array[4] + splitElement + array[5] + splitElement + array[6];
 
          arrayListHistoryShort.add( string );
       }
@@ -216,20 +213,17 @@ public class MainActivity extends AppCompatActivity implements IConstant, View.O
    @Override
    public void onClick( View buttonClick )
    {
-      switch( buttonClick.getId() )
-      {
-         case R.id.buttonHistory:
-            startActivity( new Intent( this, HistoryActivity.class ) ); // переходим на Activity
-            break;
-         case R.id.buttonPlus:
-            startActivity( new Intent( this, PlusActivity.class ) ); // переходим на Activity
-            break;
-         case R.id.buttonMinus:
-            startActivity( new Intent( this, MinusActivity.class ) ); // переходим на Activity
-            break;
-         case R.id.buttonChange:
-            startActivity( new Intent( this, ChangeActivity.class ) ); // переходим на Activity
-      }
+      if( buttonClick.getId() == R.id.buttonHistory )
+         startActivity( new Intent( this, HistoryActivity.class ) ); // переходим на Activity
+
+      if( buttonClick.getId() == R.id.buttonPlus )
+         startActivity( new Intent( this, PlusActivity.class ) ); // переходим на Activity
+
+      if( buttonClick.getId() == R.id.buttonMinus )
+         startActivity( new Intent( this, MinusActivity.class ) ); // переходим на Activity
+
+      if( buttonClick.getId() == R.id.buttonChange )
+         startActivity( new Intent( this, ChangeActivity.class ) ); // переходим на Activity
    }
 
    // сохраняем из LocalBase в Firebase

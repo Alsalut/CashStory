@@ -66,15 +66,11 @@ public class MinusActivity extends AppCompatActivity implements View.OnClickList
 
       // сохраняем изменения в Firebase
       // а в myLocalBase история всегда будет сохраняться из Firebase ( в MainActivity )
-      switch( btn.getId() )
-      {
-         case R.id.image_button_minus_card:
-            newHistory = createTransaction.fromCard( sum, comment );
-            break;
+      if( btn.getId() == R.id.image_button_minus_card )
+         newHistory = createTransaction.fromCard( sum, comment );
 
-         case R.id.image_button_minus_cash:
-            newHistory = createTransaction.fromCash( sum, comment );
-      }
+      if( btn.getId() == R.id.image_button_minus_cash )
+         newHistory = createTransaction.fromCash( sum, comment );
 
       // сохраняем изменения в Firebase
       writeToFirebase( newHistory );

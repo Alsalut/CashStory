@@ -70,23 +70,18 @@ public class ChangeActivity extends AppCompatActivity implements View.OnClickLis
       // сохраняем изменения в Firebase
       // а в myLocalBase история всегда будет сохраняться из Firebase ( в MainActivity )
       String comment = "Перемещение";
-      switch( btn.getId() )
-      {
-         case R.id.image_button_change_safe_cash:
-            newHistory = createTransaction.changeSafeCash( sum, comment );
-            break;
 
-         case R.id.image_button_change_cash_safe:
-            newHistory = createTransaction.changeCashSafe( sum, comment );
-            break;
+      if( btn.getId() == R.id.image_button_change_safe_cash )
+         newHistory = createTransaction.changeSafeCash( sum, comment );
 
-         case R.id.image_button_change_cash_card:
-            newHistory = createTransaction.changeCashCard( sum, comment );
-            break;
+      if( btn.getId() == R.id.image_button_change_cash_safe )
+         newHistory = createTransaction.changeCashSafe( sum, comment );
 
-         case R.id.image_button_change_card_cash:
-            newHistory = createTransaction.changeCardCash( sum, comment );
-      }
+      if( btn.getId() == R.id.image_button_change_cash_card )
+         newHistory = createTransaction.changeCashCard( sum, comment );
+
+      if( btn.getId() == R.id.image_button_change_card_cash )
+         newHistory = createTransaction.changeCardCash( sum, comment );
 
       // сохраняем изменения в Firebase
       writeToFirebase( newHistory );

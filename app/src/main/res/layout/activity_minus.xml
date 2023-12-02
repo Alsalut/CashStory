@@ -51,7 +51,8 @@
         app:layout_constraintBottom_toTopOf="@id/edit_text_minus_sum"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image_view_minus_card" />
+        app:layout_constraintTop_toBottomOf="@id/image_view_minus_card"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/edit_text_minus_sum"
@@ -61,6 +62,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_text_minus_comment" />
+        app:layout_constraintTop_toBottomOf="@id/edit_text_minus_comment"
+        android:importantForAutofill="no" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -113,17 +113,14 @@ public class ModificationActivity extends AppCompatActivity implements View.OnCl
       // если изменения сделаны ошибочно
       objectLocalBase.backupHistory();
 
-      switch( button.getId() )
-      {
-         case R.id.button_modification_save_change:
-            saveChangeTransaction(); // сохраняем изменения в arrayListHistory
-            break;
-         case R.id.button_modification_del_transaction:
-            removeTransaction(); // удаление выбранной транзакции
-            break;
-         case R.id.button_modification_del_history:
-            removeHistory(); // удаление всей истории
-      }
+      if( button.getId() == R.id.button_modification_save_change )
+         saveChangeTransaction(); // сохраняем изменения в arrayListHistory
+
+      if( button.getId() == R.id.button_modification_del_transaction )
+         removeTransaction(); // удаление выбранной транзакции
+
+      if( button.getId() == R.id.button_modification_del_history )
+         removeHistory(); // удаление всей истории
 
       // сохраняем изменения в Firebase
       // а в myLocalBase история всегда будет сохраняться из Firebase ( в MainActivity )
@@ -141,7 +138,7 @@ public class ModificationActivity extends AppCompatActivity implements View.OnCl
       if( arrayListHistory.isEmpty() ) return null;
 
       // задаём первый элемент строки newHistory
-      String newHistory = arrayListHistory.get( 0 );
+      StringBuilder newHistory = new StringBuilder( arrayListHistory.get( 0 ) );
 
       // собираем строку из элементов arrayListHistory
       // вставляя между ними разделитель splitHistory
@@ -149,9 +146,9 @@ public class ModificationActivity extends AppCompatActivity implements View.OnCl
       {
          // первый элемент не обрабатываем
          if( !element.equals( arrayList.get( 0 ) ) )
-            newHistory = newHistory + splitHistory + element;
+            newHistory.append( splitHistory ).append( element );
       }
 
-      return newHistory;
+      return newHistory.toString();
    }
 }

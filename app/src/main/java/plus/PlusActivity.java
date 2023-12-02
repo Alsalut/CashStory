@@ -66,15 +66,11 @@ public class PlusActivity extends AppCompatActivity implements View.OnClickListe
 
       // сохраняем изменения в Firebase
       // а в myLocalBase история всегда будет сохраняться из Firebase ( в MainActivity )
-      switch( btn.getId() )
-      {
-         case R.id.image_button_plus_card:
-            newHistory = createTransaction.toCard( sum, comment );
-            break;
+      if( btn.getId() == R.id.image_button_plus_card )
+         newHistory = createTransaction.toCard( sum, comment );
 
-         case R.id.image_button_plus_cash:
-            newHistory = createTransaction.toCash( sum, comment );
-      }
+      if( btn.getId() == R.id.image_button_plus_cash )
+         newHistory = createTransaction.toCash( sum, comment );
 
       // сохраняем изменения в Firebase
       writeToFirebase( newHistory );
